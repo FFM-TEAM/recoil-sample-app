@@ -1,11 +1,17 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import HomePage from "@/pages/HomePage";
+import { Route, Switch } from 'react-router-dom';
+
+import Core from './containers/Core';
+import HomePage from '@/pages/HomePage';
+import React from 'react';
+
 function App() {
   return (
-    <Switch>
-      <Route path="/" component={HomePage} />
-    </Switch>
+    <>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
+      <Core />
+    </>
   );
 }
 

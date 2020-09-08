@@ -1,0 +1,16 @@
+{
+  "extends": ["react-app"],
+  "plugins": ["react-hooks", "simple-import-sort"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "no-multiple-empty-lines": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "eol-last": ["error", "always"],
+    "quotes": ["error", "single"],
+    "no-tabs": "error",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" }
+    ]
+  }
+}

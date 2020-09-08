@@ -1,9 +1,18 @@
-import * as React from "react";
+import * as React from 'react';
+
+import PageTemplate from '../components/common/PageTemplate';
+import UserSelector from '@/components/common/UserSelector';
+import styled from 'styled-components';
+
+const HomeTemplateBlock = styled(PageTemplate)``;
 
 export interface HomePageProps {}
 
-const HomePage: React.FC<HomePageProps> = props => {
-  return <div>cra-template-songc</div>;
-};
-
+function HomePage() {
+  return (
+    <HomeTemplateBlock>
+      <UserSelector />
+    </HomeTemplateBlock>
+  );
+}
 export default HomePage;

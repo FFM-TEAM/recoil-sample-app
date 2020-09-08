@@ -1,13 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-
-import App from "@/App";
-import store from "@/modules";
+import App from '@/App';
+import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { RecoilRoot } from 'recoil';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById("root")
+  <BrowserRouter>
+    <RecoilRoot>
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </React.Suspense>
+    </RecoilRoot>
+  </BrowserRouter>,
+  document.getElementById('root'),
 );
